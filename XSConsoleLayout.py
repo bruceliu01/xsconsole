@@ -83,6 +83,11 @@ class Layout:
     def TopDialogue(self):
         return self.dialogues[-1]
     
+    def PushDialogueEnhance(self, inDialogue):
+        while len(self.dialogues) > 1:
+            self.PopDialogue()
+        self.dialogues.append(inDialogue)
+ 
     def PushDialogue(self, inDialogue):
         self.dialogues.append(inDialogue)
         
